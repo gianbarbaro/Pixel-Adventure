@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=3 uid="uid://cr0okimo8eor2"]
+
+[ext_resource type="Texture2D" uid="uid://55atopfw53hb" path="res://Traps/Platforms/Brown On (32x8).png" id="1_45y0p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7m3bl"]
+atlas = ExtResource("1_45y0p")
+region = Rect2(0, 0, 32, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wpvs"]
+atlas = ExtResource("1_45y0p")
+region = Rect2(32, 0, 32, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efjf8"]
+atlas = ExtResource("1_45y0p")
+region = Rect2(64, 0, 32, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iiujh"]
+atlas = ExtResource("1_45y0p")
+region = Rect2(96, 0, 32, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vx2rc"]
+atlas = ExtResource("1_45y0p")
+region = Rect2(128, 0, 32, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bw5nm"]
+atlas = ExtResource("1_45y0p")
+region = Rect2(160, 0, 32, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8567"]
+atlas = ExtResource("1_45y0p")
+region = Rect2(192, 0, 32, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjwxi"]
+atlas = ExtResource("1_45y0p")
+region = Rect2(224, 0, 32, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1made"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7m3bl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wpvs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efjf8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iiujh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vx2rc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bw5nm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8567")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjwxi")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ueklr"]
+size = Vector2(30, 5)
+
+[node name="staticPlatform" type="StaticBody2D" groups=["platform"]]
+position = Vector2(67, 207)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_1made")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.627567
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_ueklr")
+one_way_collision = true

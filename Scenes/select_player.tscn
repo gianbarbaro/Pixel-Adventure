@@ -1,0 +1,187 @@
+[gd_scene load_steps=18 format=3 uid="uid://c64l1k4ixhfku"]
+
+[ext_resource type="Script" path="res://Scripts/select_player.gd" id="1_4mbrw"]
+[ext_resource type="Texture2D" uid="uid://cif8cnibkdic0" path="res://Main Characters/Ninja Frog/Idle (32x32).png" id="1_do6rf"]
+[ext_resource type="Texture2D" uid="uid://cuhepho0xogoq" path="res://Main Characters/Mask Dude/Idle (32x32).png" id="2_0cy2h"]
+[ext_resource type="Texture2D" uid="uid://bb4wuclyxbx3" path="res://Background/Green.png" id="2_fdn7t"]
+[ext_resource type="Texture2D" uid="uid://8u7xstua58sa" path="res://Main Characters/Ninja Frog/Jump (32x32).png" id="2_wmy1w"]
+[ext_resource type="TileSet" uid="uid://dp534ko34mgf7" path="res://Tileset/main.tres" id="3_2cyjs"]
+[ext_resource type="Texture2D" uid="uid://dqmskucig5882" path="res://Main Characters/Pink Man/Idle (32x32).png" id="3_vo4hn"]
+[ext_resource type="Texture2D" uid="uid://b5cra3kexciab" path="res://Main Characters/Virtual Guy/Idle (32x32).png" id="4_3vt4p"]
+[ext_resource type="Texture2D" uid="uid://din64cip4kp24" path="res://Main Characters/Mask Dude/Jump (32x32).png" id="4_fjas4"]
+[ext_resource type="Texture2D" uid="uid://byoj5jgtdsfmx" path="res://Main Characters/Pink Man/Jump (32x32).png" id="6_7br5n"]
+[ext_resource type="Texture2D" uid="uid://bx7tv4u5r64l1" path="res://Main Characters/Virtual Guy/Jump (32x32).png" id="8_citvx"]
+[ext_resource type="FontFile" uid="uid://c4ltg1n7atoeh" path="res://Fonts/8-bit Arcade In.ttf" id="12_q5p2d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axeql"]
+atlas = ExtResource("1_do6rf")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_du5e3"]
+atlas = ExtResource("2_0cy2h")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyxf"]
+atlas = ExtResource("3_vo4hn")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwwps"]
+atlas = ExtResource("4_3vt4p")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1w21b"]
+font = ExtResource("12_q5p2d")
+font_size = 32
+font_color = Color(0.996078, 0.996078, 0.996078, 1)
+
+[node name="selectPlayer" type="Node2D"]
+script = ExtResource("1_4mbrw")
+
+[node name="fondo" type="Node2D" parent="."]
+z_index = -1
+position = Vector2(16, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="fondo"]
+position = Vector2(16, 64)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_fdn7t")
+
+[node name="Sprite2D2" type="Sprite2D" parent="fondo"]
+position = Vector2(112, 64)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_fdn7t")
+
+[node name="Sprite2D3" type="Sprite2D" parent="fondo"]
+position = Vector2(208, 64)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_fdn7t")
+
+[node name="Sprite2D4" type="Sprite2D" parent="fondo"]
+position = Vector2(304, 64)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_fdn7t")
+
+[node name="Sprite2D5" type="Sprite2D" parent="fondo"]
+position = Vector2(400, 64)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_fdn7t")
+
+[node name="Sprite2D6" type="Sprite2D" parent="fondo"]
+position = Vector2(496, 64)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_fdn7t")
+
+[node name="Sprite2D7" type="Sprite2D" parent="fondo"]
+position = Vector2(16, 160)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_fdn7t")
+
+[node name="Sprite2D8" type="Sprite2D" parent="fondo"]
+position = Vector2(112, 160)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_fdn7t")
+
+[node name="Sprite2D9" type="Sprite2D" parent="fondo"]
+position = Vector2(208, 160)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_fdn7t")
+
+[node name="Sprite2D10" type="Sprite2D" parent="fondo"]
+position = Vector2(304, 160)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_fdn7t")
+
+[node name="Sprite2D11" type="Sprite2D" parent="fondo"]
+position = Vector2(400, 160)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_fdn7t")
+
+[node name="Sprite2D12" type="Sprite2D" parent="fondo"]
+position = Vector2(496, 160)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_fdn7t")
+
+[node name="Sprite2D13" type="Sprite2D" parent="fondo"]
+position = Vector2(16, 256)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_fdn7t")
+
+[node name="Sprite2D14" type="Sprite2D" parent="fondo"]
+position = Vector2(112, 256)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_fdn7t")
+
+[node name="Sprite2D15" type="Sprite2D" parent="fondo"]
+position = Vector2(208, 256)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_fdn7t")
+
+[node name="Sprite2D16" type="Sprite2D" parent="fondo"]
+position = Vector2(304, 256)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_fdn7t")
+
+[node name="Sprite2D17" type="Sprite2D" parent="fondo"]
+position = Vector2(400, 256)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_fdn7t")
+
+[node name="Sprite2D18" type="Sprite2D" parent="fondo"]
+position = Vector2(496, 256)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_fdn7t")
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-16, 0)
+tile_set = ExtResource("3_2cyjs")
+format = 2
+layer_0/tile_data = PackedInt32Array(1114115, 131072, 6, 851971, 131072, 5, 917507, 131072, 5, 983043, 131072, 5, 1048579, 131072, 5, 131075, 196608, 4, 131104, 262144, 4, 131076, 65536, 6, 131077, 65536, 6, 131078, 65536, 6, 131079, 65536, 6, 131080, 65536, 6, 131081, 65536, 6, 131082, 65536, 6, 131083, 65536, 6, 131084, 65536, 6, 131085, 65536, 6, 131086, 65536, 6, 131087, 65536, 6, 131088, 65536, 6, 131089, 65536, 6, 131090, 65536, 6, 131091, 65536, 6, 131092, 65536, 6, 131093, 65536, 6, 131094, 65536, 6, 131095, 65536, 6, 131096, 65536, 6, 131097, 65536, 6, 131098, 65536, 6, 131099, 65536, 6, 131100, 65536, 6, 131101, 65536, 6, 131102, 65536, 6, 131103, 65536, 6, 1179680, 262144, 5, 196640, 0, 5, 262176, 0, 5, 327712, 0, 5, 393248, 0, 5, 458784, 0, 5, 524320, 0, 5, 589856, 0, 5, 655392, 0, 5, 720928, 0, 5, 786464, 0, 5, 852000, 0, 5, 917536, 0, 5, 983072, 0, 5, 1048608, 0, 5, 1114144, 0, 5, 1179665, 65536, 0, 1179666, 65536, 0, 1179667, 65536, 0, 1179668, 65536, 0, 1179669, 65536, 0, 1179670, 65536, 0, 1179671, 65536, 0, 1179672, 65536, 0, 1179673, 65536, 0, 1179674, 65536, 0, 1179675, 65536, 0, 1179676, 65536, 0, 1179677, 65536, 0, 1179678, 65536, 0, 1179679, 65536, 0, 196611, 131072, 1, 262147, 131072, 1, 327683, 131072, 1, 393219, 131072, 1, 458755, 131072, 1, 524291, 131072, 1, 1310721, 65536, 1, 1310722, 65536, 1, 1310723, 65536, 1, 1310724, 65536, 1, 1310725, 65536, 1, 1310726, 65536, 1, 1310727, 65536, 1, 1310728, 65536, 1, 1310729, 65536, 1, 1310730, 65536, 1, 1310731, 65536, 1, 1310732, 65536, 1, 1310733, 65536, 1, 1310734, 65536, 1, 1310735, 65536, 1, 1310736, 65536, 1, 1310737, 65536, 1, 1310738, 65536, 1, 1310739, 65536, 1, 1310740, 65536, 1, 1310741, 65536, 1, 1310742, 65536, 1, 1310743, 65536, 1, 1310744, 65536, 1, 1310745, 65536, 1, 1310746, 65536, 1, 1310747, 65536, 1, 1310748, 65536, 1, 1310749, 65536, 1, 1310750, 65536, 1, 1310751, 65536, 1, 1245215, 65536, 1, 1245216, 65536, 1, 1245217, 65536, 1, 1310753, 65536, 1, 1310752, 65536, 1, 1310754, 65536, 1, 1179682, 65536, 1, 1245218, 65536, 1, 1179681, 65536, 1, 1114145, 65536, 1, 1114146, 65536, 1, 1048610, 65536, 1, 1048609, 65536, 1, 983073, 65536, 1, 983074, 65536, 1, 34, 65536, 1, 65570, 65536, 1, 131106, 65536, 1, 196642, 65536, 1, 262178, 65536, 1, 327714, 65536, 1, 393250, 65536, 1, 458786, 65536, 1, 524322, 65536, 1, 589858, 65536, 1, 655394, 65536, 1, 720930, 65536, 1, 786466, 65536, 1, 852002, 65536, 1, 917538, 65536, 1, 33, 65536, 1, 65569, 65536, 1, 131105, 65536, 1, 196641, 65536, 1, 262177, 65536, 1, 327713, 65536, 1, 393249, 65536, 1, 458785, 65536, 1, 524321, 65536, 1, 589857, 65536, 1, 655393, 65536, 1, 720929, 65536, 1, 786465, 65536, 1, 852001, 65536, 1, 917537, 65536, 1, 0, 65536, 1, 1, 65536, 1, 2, 65536, 1, 3, 65536, 1, 4, 65536, 1, 5, 65536, 1, 6, 65536, 1, 7, 65536, 1, 8, 65536, 1, 9, 65536, 1, 10, 65536, 1, 11, 65536, 1, 12, 65536, 1, 13, 65536, 1, 14, 65536, 1, 15, 65536, 1, 16, 65536, 1, 17, 65536, 1, 18, 65536, 1, 19, 65536, 1, 20, 65536, 1, 21, 65536, 1, 22, 65536, 1, 23, 65536, 1, 24, 65536, 1, 25, 65536, 1, 26, 65536, 1, 27, 65536, 1, 28, 65536, 1, 29, 65536, 1, 30, 65536, 1, 31, 65536, 1, 32, 65536, 1, 65536, 65536, 1, 65537, 65536, 1, 65538, 65536, 1, 65539, 65536, 1, 65540, 65536, 1, 65541, 65536, 1, 65542, 65536, 1, 65543, 65536, 1, 65544, 65536, 1, 65545, 65536, 1, 65546, 65536, 1, 65547, 65536, 1, 65548, 65536, 1, 65549, 65536, 1, 65550, 65536, 1, 65551, 65536, 1, 65552, 65536, 1, 65553, 65536, 1, 65554, 65536, 1, 65555, 65536, 1, 65556, 65536, 1, 65557, 65536, 1, 65558, 65536, 1, 65559, 65536, 1, 65560, 65536, 1, 65561, 65536, 1, 65562, 65536, 1, 65563, 65536, 1, 65564, 65536, 1, 65565, 65536, 1, 65566, 65536, 1, 65567, 65536, 1, 65568, 65536, 1, 131072, 65536, 1, 196608, 65536, 1, 262144, 65536, 1, 327680, 65536, 1, 393216, 65536, 1, 458752, 65536, 1, 524288, 65536, 1, 589824, 65536, 1, 655360, 65536, 1, 720896, 65536, 1, 786432, 65536, 1, 851968, 65536, 1, 917504, 65536, 1, 983040, 65536, 1, 1048576, 65536, 1, 1114112, 65536, 1, 1179648, 65536, 1, 1245184, 65536, 1, 1310720, 65536, 1, 131073, 65536, 1, 196609, 65536, 1, 262145, 65536, 1, 327681, 65536, 1, 393217, 65536, 1, 458753, 65536, 1, 524289, 65536, 1, 589825, 65536, 1, 655361, 65536, 1, 720897, 65536, 1, 786433, 65536, 1, 851969, 65536, 1, 917505, 65536, 1, 983041, 65536, 1, 1048577, 65536, 1, 1114113, 65536, 1, 1179649, 65536, 1, 1245185, 65536, 1, 131074, 65536, 1, 196610, 65536, 1, 262146, 65536, 1, 327682, 65536, 1, 393218, 65536, 1, 458754, 65536, 1, 524290, 65536, 1, 851970, 65536, 1, 917506, 65536, 1, 983042, 65536, 1, 1048578, 65536, 1, 1114114, 65536, 1, 1179650, 65536, 1, 1245186, 65536, 1, 1245187, 65536, 1, 1245188, 65536, 1, 1245189, 65536, 1, 1245190, 65536, 1, 1245191, 65536, 1, 1245192, 65536, 1, 1245193, 65536, 1, 1245194, 65536, 1, 1245195, 65536, 1, 1245196, 65536, 1, 1245197, 65536, 1, 1245198, 65536, 1, 1245199, 65536, 1, 1245200, 65536, 1, 1245201, 65536, 1, 1245202, 65536, 1, 1245203, 65536, 1, 1245204, 65536, 1, 1245205, 65536, 1, 1245206, 65536, 1, 1245207, 65536, 1, 1245208, 65536, 1, 1245209, 65536, 1, 1245210, 65536, 1, 1245211, 65536, 1, 1245212, 65536, 1, 1245213, 65536, 1, 1245214, 65536, 1, 35, 65536, 1, 65571, 65536, 1, 131107, 65536, 1, 196643, 65536, 1, 262179, 65536, 1, 327715, 65536, 1, 393251, 65536, 1, 458787, 65536, 1, 524323, 65536, 1, 589859, 65536, 1, 655395, 65536, 1, 720931, 65536, 1, 786467, 65536, 1, 852003, 65536, 1, 917539, 65536, 1, 983075, 65536, 1, 1048611, 65536, 1, 1114147, 65536, 1, 1179683, 65536, 1, 1245219, 65536, 1, 1310755, 65536, 1, 1179652, 65536, 0, 1179653, 65536, 0, 1179654, 65536, 0, 1179655, 65536, 0, 1179656, 65536, 0, 1179657, 65536, 0, 1179658, 65536, 0, 1179659, 65536, 0, 1179660, 65536, 0, 1179661, 65536, 0, 1179662, 65536, 0, 1179663, 65536, 0, 1179664, 65536, 0, 1179651, 131072, 0, 589827, 131072, 4, 655363, 131072, 5, 720899, 131072, 5, 786435, 131072, 5, 589826, 65536, 5, 655362, 65536, 5, 720898, 65536, 5, 786434, 65536, 5)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(272, 167)
+zoom = Vector2(2.25, 2.25)
+
+[node name="player1" type="TextureButton" parent="."]
+offset_left = 134.0
+offset_top = 160.0
+offset_right = 166.0
+offset_bottom = 192.0
+texture_normal = SubResource("AtlasTexture_axeql")
+texture_hover = ExtResource("2_wmy1w")
+
+[node name="player2" type="TextureButton" parent="."]
+offset_left = 214.0
+offset_top = 160.0
+offset_right = 246.0
+offset_bottom = 192.0
+texture_normal = SubResource("AtlasTexture_du5e3")
+texture_hover = ExtResource("4_fjas4")
+
+[node name="player3" type="TextureButton" parent="."]
+offset_left = 294.0
+offset_top = 160.0
+offset_right = 326.0
+offset_bottom = 192.0
+texture_normal = SubResource("AtlasTexture_tuyxf")
+texture_hover = ExtResource("6_7br5n")
+
+[node name="player4" type="TextureButton" parent="."]
+offset_left = 374.0
+offset_top = 160.0
+offset_right = 406.0
+offset_bottom = 192.0
+texture_normal = SubResource("AtlasTexture_xwwps")
+texture_hover = ExtResource("8_citvx")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 96.0
+offset_top = 112.0
+offset_right = 444.0
+offset_bottom = 134.0
+text = "SELECCIONA TU PERSONAJE"
+label_settings = SubResource("LabelSettings_1w21b")
+
+[connection signal="pressed" from="player1" to="." method="_on_player_1_pressed"]
+[connection signal="pressed" from="player2" to="." method="_on_player_2_pressed"]
+[connection signal="pressed" from="player3" to="." method="_on_player_3_pressed"]
+[connection signal="pressed" from="player4" to="." method="_on_player_4_pressed"]
