@@ -1,12 +1,12 @@
-[gd_scene load_steps=22 format=3 uid="uid://dl2uoam8mbp0a"]
+[gd_scene load_steps=40 format=3 uid="uid://dl2uoam8mbp0a"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_7dvdu"]
 [ext_resource type="Texture2D" uid="uid://b54wvj8uj875r" path="res://Terrain/Terrain (16x16).png" id="3_lhrxa"]
 [ext_resource type="Texture2D" uid="uid://bb4wuclyxbx3" path="res://Background/Green.png" id="4_vamws"]
-[ext_resource type="PackedScene" uid="uid://cr0okimo8eor2" path="res://Scenes/static_platform.tscn" id="5_78v30"]
 [ext_resource type="PackedScene" uid="uid://bg5gf48x6u0nl" path="res://Scenes/fruit.tscn" id="6_ypb6u"]
 [ext_resource type="Script" path="res://Scripts/checkpoint start.gd" id="7_3iu1c"]
 [ext_resource type="Texture2D" uid="uid://m8v3axcvpyh2" path="res://Items/Checkpoints/End/End (Idle).png" id="8_urjh1"]
+[ext_resource type="Texture2D" uid="uid://u8coq4fl7b" path="res://Traps/Platforms/Grey On (32x8).png" id="8_vn8sy"]
 [ext_resource type="Texture2D" uid="uid://diyjje7xrm3xr" path="res://Items/Checkpoints/End/End (Pressed) (64x64).png" id="9_v4e7k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u0jpj"]
@@ -567,6 +567,161 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y5sak"]
 size = Vector2(30, 44)
 
+[sub_resource type="Curve2D" id="Curve2D_nujy3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 160, 96, 0, 0, 0, 0, 416, 96)
+}
+point_count = 2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xlyy"]
+atlas = ExtResource("8_vn8sy")
+region = Rect2(0, 0, 32, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjm5f"]
+atlas = ExtResource("8_vn8sy")
+region = Rect2(32, 0, 32, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vchhm"]
+atlas = ExtResource("8_vn8sy")
+region = Rect2(64, 0, 32, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ryyeq"]
+atlas = ExtResource("8_vn8sy")
+region = Rect2(96, 0, 32, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0oj8"]
+atlas = ExtResource("8_vn8sy")
+region = Rect2(128, 0, 32, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3oo61"]
+atlas = ExtResource("8_vn8sy")
+region = Rect2(160, 0, 32, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eraek"]
+atlas = ExtResource("8_vn8sy")
+region = Rect2(192, 0, 32, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xykm"]
+atlas = ExtResource("8_vn8sy")
+region = Rect2(224, 0, 32, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mdm0d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xlyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjm5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vchhm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ryyeq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0oj8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3oo61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eraek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xykm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mh8o4"]
+size = Vector2(30, 5)
+
+[sub_resource type="Animation" id="Animation_w0x3r"]
+resource_name = "move"
+length = 5.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_0v5xf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8wurv"]
+_data = {
+"RESET": SubResource("Animation_0v5xf"),
+"move": SubResource("Animation_w0x3r")
+}
+
+[sub_resource type="Curve2D" id="Curve2D_4mivi"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 352, 144, 0, 0, 0, 0, 224, 144)
+}
+point_count = 2
+
+[sub_resource type="Animation" id="Animation_xpa8i"]
+resource_name = "move"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_t2xn2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0a4f3"]
+_data = {
+"RESET": SubResource("Animation_t2xn2"),
+"move": SubResource("Animation_xpa8i")
+}
+
 [node name="end" type="Node2D" groups=["main"]]
 script = ExtResource("1_7dvdu")
 
@@ -658,18 +813,6 @@ position = Vector2(480, 256)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("4_vamws")
 
-[node name="platforms" type="Node2D" parent="."]
-position = Vector2(0, -16)
-
-[node name="staticPlatform" parent="platforms" instance=ExtResource("5_78v30")]
-position = Vector2(288, 160)
-
-[node name="staticPlatform2" parent="platforms" instance=ExtResource("5_78v30")]
-position = Vector2(192, 112)
-
-[node name="staticPlatform3" parent="platforms" instance=ExtResource("5_78v30")]
-position = Vector2(384, 112)
-
 [node name="fruits" type="Node2D" parent="."]
 position = Vector2(40, 0)
 
@@ -745,5 +888,59 @@ frame_progress = 0.312087
 [node name="CollisionShape2D" type="CollisionShape2D" parent="checkpoint"]
 position = Vector2(8, 10)
 shape = SubResource("RectangleShape2D_y5sak")
+
+[node name="plataformas" type="Node2D" parent="."]
+
+[node name="plataformaMovil" type="Path2D" parent="plataformas"]
+curve = SubResource("Curve2D_nujy3")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="plataformas/plataformaMovil"]
+position = Vector2(160, 96)
+rotates = false
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="plataformas/plataformaMovil/PathFollow2D" groups=["platform"]]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="plataformas/plataformaMovil/PathFollow2D/CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_mdm0d")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.934502
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plataformas/plataformaMovil/PathFollow2D/CharacterBody2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_mh8o4")
+one_way_collision = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="plataformas/plataformaMovil"]
+libraries = {
+"": SubResource("AnimationLibrary_8wurv")
+}
+autoplay = "move"
+
+[node name="plataformaMovil2" type="Path2D" parent="plataformas"]
+curve = SubResource("Curve2D_4mivi")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="plataformas/plataformaMovil2"]
+position = Vector2(352, 144)
+rotates = false
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="plataformas/plataformaMovil2/PathFollow2D" groups=["platform"]]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="plataformas/plataformaMovil2/PathFollow2D/CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_mdm0d")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.349398
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plataformas/plataformaMovil2/PathFollow2D/CharacterBody2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_mh8o4")
+one_way_collision = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="plataformas/plataformaMovil2"]
+libraries = {
+"": SubResource("AnimationLibrary_0a4f3")
+}
+autoplay = "move"
 
 [connection signal="body_entered" from="checkpoint" to="checkpoint" method="_on_body_entered"]
