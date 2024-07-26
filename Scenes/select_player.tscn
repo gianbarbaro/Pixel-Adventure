@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://c64l1k4ixhfku"]
+[gd_scene load_steps=19 format=3 uid="uid://c64l1k4ixhfku"]
 
 [ext_resource type="Script" path="res://Scripts/select_player.gd" id="1_4mbrw"]
 [ext_resource type="Texture2D" uid="uid://cif8cnibkdic0" path="res://Main Characters/Ninja Frog/Idle (32x32).png" id="1_do6rf"]
 [ext_resource type="Texture2D" uid="uid://cuhepho0xogoq" path="res://Main Characters/Mask Dude/Idle (32x32).png" id="2_0cy2h"]
 [ext_resource type="Texture2D" uid="uid://bb4wuclyxbx3" path="res://Background/Green.png" id="2_fdn7t"]
+[ext_resource type="AudioStream" uid="uid://ccc8lt4qucv0g" path="res://Music/Levels/Juhani Junkala [Retro Game Music Pack] Title Screen.wav" id="2_q56aq"]
 [ext_resource type="Texture2D" uid="uid://8u7xstua58sa" path="res://Main Characters/Ninja Frog/Jump (32x32).png" id="2_wmy1w"]
 [ext_resource type="TileSet" uid="uid://dp534ko34mgf7" path="res://Tileset/main.tres" id="3_2cyjs"]
 [ext_resource type="Texture2D" uid="uid://dqmskucig5882" path="res://Main Characters/Pink Man/Idle (32x32).png" id="3_vo4hn"]
@@ -36,6 +37,11 @@ font_color = Color(0.996078, 0.996078, 0.996078, 1)
 
 [node name="selectPlayer" type="Node2D"]
 script = ExtResource("1_4mbrw")
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_q56aq")
+volume_db = -30.072
+autoplay = true
 
 [node name="fondo" type="Node2D" parent="."]
 z_index = -1

@@ -36,6 +36,7 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("saltar"): #primer salto cuando esta en el suelo
 			salto_cont += 1
 			velocity.y = -salto
+			$jump.play() #sfx de salto
 	else:
 		if Input.is_action_just_released("saltar"): #regular salto del player
 			velocity.y += 300 
@@ -43,6 +44,7 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("saltar") and salto_cont < salto_max:
 			salto_cont += 1
 			velocity.y = -salto+100
+			$jump.play() #sfx de salto
 	move_and_slide()
 	
 	#animciones

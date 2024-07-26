@@ -1,6 +1,7 @@
-[gd_scene load_steps=38 format=3 uid="uid://ci1bjpi85agjv"]
+[gd_scene load_steps=39 format=3 uid="uid://ci1bjpi85agjv"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_twwy1"]
+[ext_resource type="AudioStream" uid="uid://swxyvdb6jxad" path="res://Music/Levels/Juhani Junkala [Retro Game Music Pack] Level 1.wav" id="2_26cpx"]
 [ext_resource type="TileSet" uid="uid://dp534ko34mgf7" path="res://Tileset/main.tres" id="2_kkmh1"]
 [ext_resource type="Texture2D" uid="uid://b7dka2y738fxo" path="res://Background/Yellow.png" id="3_lliqn"]
 [ext_resource type="PackedScene" uid="uid://bg5gf48x6u0nl" path="res://Scenes/fruit.tscn" id="12_8ieq0"]
@@ -212,6 +213,11 @@ size = Vector2(32, 9)
 
 [node name="main" type="Node2D" groups=["main"]]
 script = ExtResource("1_twwy1")
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_26cpx")
+volume_db = -30.072
+autoplay = true
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1

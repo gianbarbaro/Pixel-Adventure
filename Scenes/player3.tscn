@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://dlukj3vsjhvb1"]
+[gd_scene load_steps=49 format=3 uid="uid://dlukj3vsjhvb1"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_66hen"]
 [ext_resource type="Texture2D" uid="uid://d0s8c43dkws60" path="res://Main Characters/Pink Man/Hit (32x32).png" id="2_ywrpo"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dqmskucig5882" path="res://Main Characters/Pink Man/Idle (32x32).png" id="5_5xyb8"]
 [ext_resource type="Texture2D" uid="uid://byoj5jgtdsfmx" path="res://Main Characters/Pink Man/Jump (32x32).png" id="6_n5nq0"]
 [ext_resource type="Texture2D" uid="uid://dukuxjxjyrgw5" path="res://Main Characters/Pink Man/Run (32x32).png" id="7_4hlkc"]
+[ext_resource type="AudioStream" uid="uid://dyns7qp8emvur" path="res://SFX/Player/double jump.wav" id="8_x1ggk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rfw14"]
 atlas = ExtResource("2_ywrpo")
@@ -332,3 +333,7 @@ target_position = Vector2(0, 20)
 [node name="RayCast2D2" type="RayCast2D" parent="rayos"]
 position = Vector2(8, 2)
 target_position = Vector2(0, 20)
+
+[node name="jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_x1ggk")
+volume_db = -17.542

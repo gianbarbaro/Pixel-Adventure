@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://wiyrtjiymonw"]
+[gd_scene load_steps=49 format=3 uid="uid://wiyrtjiymonw"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_xke23"]
 [ext_resource type="Texture2D" uid="uid://4l422i6hyifd" path="res://Main Characters/Mask Dude/Hit (32x32).png" id="2_hdxrn"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cuhepho0xogoq" path="res://Main Characters/Mask Dude/Idle (32x32).png" id="5_gpw3u"]
 [ext_resource type="Texture2D" uid="uid://din64cip4kp24" path="res://Main Characters/Mask Dude/Jump (32x32).png" id="6_dkjtk"]
 [ext_resource type="Texture2D" uid="uid://i3rrn856rddm" path="res://Main Characters/Mask Dude/Run (32x32).png" id="7_f4jnc"]
+[ext_resource type="AudioStream" uid="uid://dyns7qp8emvur" path="res://SFX/Player/double jump.wav" id="8_qqonq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ssvql"]
 atlas = ExtResource("2_hdxrn")
@@ -332,3 +333,7 @@ target_position = Vector2(0, 20)
 [node name="RayCast2D2" type="RayCast2D" parent="rayos"]
 position = Vector2(8, 2)
 target_position = Vector2(0, 20)
+
+[node name="jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_qqonq")
+volume_db = -17.542

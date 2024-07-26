@@ -1,6 +1,7 @@
-[gd_scene load_steps=40 format=3 uid="uid://dl2uoam8mbp0a"]
+[gd_scene load_steps=41 format=3 uid="uid://dl2uoam8mbp0a"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_7dvdu"]
+[ext_resource type="AudioStream" uid="uid://dhpanyjbw4mob" path="res://Music/Levels/Juhani Junkala [Retro Game Music Pack] Ending.wav" id="2_w3m61"]
 [ext_resource type="Texture2D" uid="uid://b54wvj8uj875r" path="res://Terrain/Terrain (16x16).png" id="3_lhrxa"]
 [ext_resource type="Texture2D" uid="uid://bb4wuclyxbx3" path="res://Background/Green.png" id="4_vamws"]
 [ext_resource type="PackedScene" uid="uid://bg5gf48x6u0nl" path="res://Scenes/fruit.tscn" id="6_ypb6u"]
@@ -725,6 +726,11 @@ _data = {
 [node name="end" type="Node2D" groups=["main"]]
 script = ExtResource("1_7dvdu")
 
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_w3m61")
+volume_db = -30.072
+autoplay = true
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_jego4")
 format = 2
@@ -904,7 +910,7 @@ rotates = false
 sprite_frames = SubResource("SpriteFrames_mdm0d")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.934502
+frame_progress = 0.530201
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="plataformas/plataformaMovil/PathFollow2D/CharacterBody2D"]
 position = Vector2(0, 0.5)
