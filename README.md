@@ -12,10 +12,11 @@ El desarrollo consistió en:
 * Creación de enemigos con movimiento propio y area de detección para perseguir al personaje. Detección de muros y precipicios para el cambio de dirección.
 * Cambio de escenas entre niveles.
 * Spawn de aparición y checkpoints.
-* Creación de plataformas traspasables.
+* Creación de plataformas traspasables y móviles.
 * Optimización de escenas. Uso del singleton y autoload.
 * Programar la selección de skins del personaje.
 * Selector de niveles.
+* Música para niveles y efectos de sonido (salto y recolección).
 
 Assets por Pixel Frog
 https://pixelfrog-assets.itch.io/pixel-adventure-1
