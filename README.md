@@ -21,3 +21,9 @@ El desarrollo consistió en:
 Assets por Pixel Frog
 https://pixelfrog-assets.itch.io/pixel-adventure-1
 https://pixelfrog-assets.itch.io/pixel-adventure-2
+
+![video1](https://github.com/user-attachments/assets/cfb52a69-4cc4-4e8d-b4e2-fadda603246b)
+
+![video2](https://github.com/user-attachments/assets/e2e2a587-5f6a-4b36-b217-09352bf67aad)
+
+![video3](https://github.com/user-attachments/assets/b62505d8-eaa6-4d53-8153-a278b8a193cc)
